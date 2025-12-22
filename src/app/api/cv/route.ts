@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server"
 
 export async function GET() {
-    const cvPath = "cv.pdf"
+    const cvPath = "Cv.pdf"
 
     try {
         const cvUrl = `/api/download-cv?file=${cvPath}`

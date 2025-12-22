@@ -5,11 +5,12 @@ import { Footer } from "@/components/home/Footer"
 import Link from "next/link"
 import { ArrowRight, Download, Sparkles } from "lucide-react"
 import { PORTFOLIO_CONTENT } from "@/lib/content/content"
+import Image from "next/image"
 
 export default function Home() {
   const handleDownloadCV = () => {
     const link = document.createElement("a")
-    link.href = "/cv.pdf"
+    link.href = "/cv/Cv.pdf"
     link.download = "Banner_Casanotan_CV.pdf"
     document.body.appendChild(link)
     link.click()
@@ -20,11 +21,9 @@ export default function Home() {
     <>
       <Navigation />
       <main className="overflow-hidden">
-        {/* Hero Section */}
-        <section className="min-h-[calc(100vh-5rem)] flex items-center section-padding bg-gradient-to-b from-background via-background to-muted/20">
+        <section className="min-h-[calc(100vh-5rem)] flex items-center section-padding bg-linear-to-br from-background via-background to-muted/20">
           <div className="container-smooth w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-              {/* Content */}
               <div className="space-y-8 lg:pr-8">
                 <div className="inline-flex items-center gap-2.5 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 backdrop-blur-sm">
                   <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -45,10 +44,9 @@ export default function Home() {
                   </p>
                 </div>
 
-                {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
                   <Link
-                    href="/contacto"
+                    href="/contact"
                     className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-[1.02]"
                   >
                     Empecemos
@@ -64,24 +62,24 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Image Placeholder */}
               <div className="relative h-[500px] lg:h-[600px] flex items-center justify-center">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-3xl blur-3xl" />
-                <div className="relative w-full h-full max-w-lg bg-gradient-to-br from-card via-card to-muted/30 rounded-3xl border border-border/50 flex items-center justify-center shadow-2xl overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="text-center text-foreground/50 z-10">
-                    <Sparkles className="w-16 h-16 mx-auto mb-4 text-primary/30" />
-                    <div className="text-sm font-medium">Imagen del Desarrollador</div>
-                    <div className="text-xs mt-2 text-foreground/40">(Reemplazar)</div>
-                  </div>
+                <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-primary/10 to-transparent rounded-3xl blur-3xl" />
+                <div className="relative w-full h-full max-w-lg bg-linear-to-br from-card via-card to-muted/30 rounded-3xl border border-border/50 flex items-center justify-center shadow-2xl overflow-hidden group">
+                  <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <Image
+                    src="/me/me.png"
+                    alt="Banner Casanotan"
+                    fill
+                    className="object-cover z-10"
+                    sizes="(max-width: 1024px) 100vw, 600px"
+                  />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Tech Stack Section */}
-        <section className="section-padding bg-gradient-to-b from-muted/20 to-background">
+        <section className="section-padding bg-linear-to-br from-muted/20 to-background">
           <div className="container-smooth">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 tracking-tight">
@@ -107,8 +105,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA to Projects */}
-        <section className="section-padding bg-gradient-to-b from-background via-muted/10 to-background">
+        <section className="section-padding bg-linear-to-b from-background via-muted/10 to-background">
           <div className="container-smooth text-center max-w-3xl">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
               Mira mis proyectos
@@ -118,7 +115,7 @@ export default function Home() {
               innovadoras.
             </p>
             <Link
-              href="/proyectos"
+              href="/projects"
               className="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-[1.02]"
             >
               Ver Proyectos

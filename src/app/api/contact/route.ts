@@ -4,8 +4,8 @@ import { type NextRequest, NextResponse } from "next/server"
 const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASSWORD,
+        user: process.env.NEXT_PUBLIC_MAIL_USER,
+        pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD,
     },
 })
 
@@ -13,21 +13,18 @@ export async function POST(request: NextRequest) {
     try {
         const { name, email, message } = await request.json()
 
-        // Validación básica
         if (!name || !email || !message) {
             return NextResponse.json({ error: "Faltan campos requeridos" }, { status: 400 })
         }
 
-        // Validar email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
         if (!emailRegex.test(email)) {
             return NextResponse.json({ error: "Email inválido" }, { status: 400 })
         }
 
-        // Enviar email al propietario del portafolio
         await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER,
+            from: process.env.NEXT_PUBLIC_MAIL_USER,
+            to: process.env.NEXT_PUBLIC_MAIL_USER,
             subject: `Nuevo mensaje de ${name} - Portafolio`,
             html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -50,9 +47,8 @@ export async function POST(request: NextRequest) {
       `,
         })
 
-        // Enviar email de confirmación al visitante
         await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+            from: process.env.NEXT_PUBLIC_MAIL_USER,
             to: email,
             subject: "Recibimos tu mensaje - Portafolio Banner Casanotan",
             html: `
@@ -88,7 +84,6 @@ export async function POST(request: NextRequest) {
     }
 }
 
-// Función para escapar HTML
 function escapeHtml(text: string): string {
     const map: { [key: string]: string } = {
         "&": "&amp;",

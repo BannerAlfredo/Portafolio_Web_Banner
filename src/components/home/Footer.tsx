@@ -7,25 +7,25 @@ export function Footer() {
     const currentYear = new Date().getFullYear()
 
     const socialLinks = [
-        { icon: Github, href: "#", label: "GitHub" },
-        { icon: Linkedin, href: "#", label: "LinkedIn" },
-        { icon: Facebook, href: "#", label: "Facebook" },
-        { icon: MessageCircle, href: "https://wa.me/?text=Hola%20Banner", label: "WhatsApp" },
+        { icon: Github, href: "https://github.com/BannerAlfredo", label: "GitHub" },
+        { icon: Linkedin, href: "#", label: "LinkedIn", text: "Banner Casanotan" },
+        { icon: Facebook, href: "https://www.facebook.com/banner.rodriguez.39", label: "Facebook" },
+        { icon: MessageCircle, href: "https://wa.me/51926507778?text=Hola%20Banner", label: "WhatsApp" },
     ]
 
+
     const footerLinks = [
-        { href: "/proyectos", label: "Proyectos" },
-        { href: "/servicios", label: "Servicios" },
-        { href: "/contacto", label: "Contacto" },
+        { href: "/projects", label: "Proyectos" },
+        { href: "/services", label: "Servicios" },
+        { href: "/contact", label: "Contacto" },
     ]
 
     return (
-        <footer className="border-t border-border/30 bg-gradient-to-b from-background to-muted/10">
+        <footer className="border-t border-border/30 bg-linear-to-br from-background to-muted/10">
             <div className="container-smooth py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-                    {/* Brand */}
                     <div>
-                        <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-4">
+                        <h3 className="text-2xl font-bold bg-linear-to-br from-primary to-primary/70 bg-clip-text text-transparent mb-4">
                             BC
                         </h3>
                         <p className="text-foreground/70 text-sm leading-relaxed max-w-xs">
@@ -33,7 +33,6 @@ export function Footer() {
                         </p>
                     </div>
 
-                    {/* Links */}
                     <div>
                         <h3 className="font-semibold text-foreground mb-6 text-sm uppercase tracking-wider">
                             Enlaces
@@ -52,7 +51,6 @@ export function Footer() {
                         </div>
                     </div>
 
-                    {/* Social */}
                     <div>
                         <h3 className="font-semibold text-foreground mb-6 text-sm uppercase tracking-wider">
                             Sígueme
@@ -74,7 +72,6 @@ export function Footer() {
                     </div>
                 </div>
 
-                {/* Divider */}
                 <div className="border-t border-border/30 pt-8">
                     <p className="text-center text-foreground/60 text-sm">
                         © {currentYear} Banner Casanotan. Todos los derechos reservados.

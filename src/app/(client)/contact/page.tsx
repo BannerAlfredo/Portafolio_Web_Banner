@@ -53,18 +53,17 @@ export default function ContactoPage() {
     }
 
     const socialLinks = [
-        { icon: Github, href: "#", label: "GitHub", text: "@bannercasanotan" },
+        { icon: Github, href: "https://github.com/BannerAlfredo", label: "GitHub", text: "@BannerAlfredo" },
         { icon: Linkedin, href: "#", label: "LinkedIn", text: "Banner Casanotan" },
-        { icon: Facebook, href: "#", label: "Facebook", text: "Banner Alfredo" },
-        { icon: MessageCircle, href: "https://wa.me/?text=Hola%20Banner", label: "WhatsApp", text: "+51 999 999 999" },
+        { icon: Facebook, href: "https://www.facebook.com/banner.rodriguez.39", label: "Facebook", text: "Banner Alfredo" },
+        { icon: MessageCircle, href: "https://wa.me/51926507778?text=Hola%20Banner", label: "WhatsApp", text: "+51 926 507 778" },
     ]
 
     return (
         <>
             <Navigation />
             <main>
-                {/* Header */}
-                <section className="section-padding bg-gradient-to-b from-background via-muted/10 to-background">
+                <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
                             Contacto
@@ -75,18 +74,15 @@ export default function ContactoPage() {
                     </div>
                 </section>
 
-                {/* Content Section */}
-                <section className="section-padding bg-gradient-to-b from-background to-muted/5">
+                <section className="section-padding bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                            {/* Contact Info */}
                             <div className="space-y-10">
                                 <div>
                                     <h2 className="text-3xl font-bold text-foreground mb-8 tracking-tight">
                                         Información de Contacto
                                     </h2>
 
-                                    {/* Contact Details */}
                                     <div className="space-y-6">
                                         <div className="flex gap-4 group">
                                             <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-all duration-200">
@@ -95,10 +91,10 @@ export default function ContactoPage() {
                                             <div>
                                                 <h3 className="font-semibold text-foreground mb-1.5">Email</h3>
                                                 <a
-                                                    href="mailto:banner@example.com"
+                                                    href="mailto:rodriguezbanner89@gmail.com"
                                                     className="text-primary hover:text-primary/80 transition-colors text-sm"
                                                 >
-                                                    banner@example.com
+                                                    rodriguezbanner89@gmail.com
                                                 </a>
                                             </div>
                                         </div>
@@ -115,7 +111,6 @@ export default function ContactoPage() {
                                     </div>
                                 </div>
 
-                                {/* Social Links */}
                                 <div>
                                     <h3 className="text-xl font-semibold text-foreground mb-6">Sígueme en mis redes</h3>
                                     <div className="space-y-3">
@@ -138,7 +133,6 @@ export default function ContactoPage() {
                                 </div>
                             </div>
 
-                            {/* Contact Form */}
                             <div className="card-soft p-8 lg:p-10">
                                 <h2 className="text-2xl font-bold text-foreground mb-8 tracking-tight">Envíame un Mensaje</h2>
 
@@ -157,7 +151,6 @@ export default function ContactoPage() {
                                 )}
 
                                 <form onSubmit={handleSubmit} className="space-y-6">
-                                    {/* Name Field */}
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2.5">
                                             Nombre
@@ -174,7 +167,6 @@ export default function ContactoPage() {
                                         />
                                     </div>
 
-                                    {/* Email Field */}
                                     <div>
                                         <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2.5">
                                             Email
@@ -191,7 +183,6 @@ export default function ContactoPage() {
                                         />
                                     </div>
 
-                                    {/* Message Field */}
                                     <div>
                                         <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2.5">
                                             Mensaje
@@ -208,7 +199,6 @@ export default function ContactoPage() {
                                         />
                                     </div>
 
-                                    {/* Submit Button */}
                                     <button
                                         type="submit"
                                         disabled={loading}

@@ -36,8 +36,7 @@ export default function ServiciosPage() {
         <>
             <Navigation />
             <main>
-                {/* Header */}
-                <section className="section-padding bg-gradient-to-b from-background via-muted/10 to-background">
+                <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-4xl mx-auto">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
                             ¿Qué ofrezco?
@@ -50,8 +49,7 @@ export default function ServiciosPage() {
                     </div>
                 </section>
 
-                {/* Services Grid */}
-                <section className="section-padding bg-gradient-to-b from-background to-muted/5">
+                <section className="section-padding bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                             {SERVICES.map((service, index) => {
@@ -61,24 +59,20 @@ export default function ServiciosPage() {
                                         key={index}
                                         className="group card-soft p-8 lg:p-10 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
                                     >
-                                        {/* Icon */}
                                         <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 border border-primary/20 group-hover:border-primary">
                                             <Icon className="text-primary group-hover:text-primary-foreground transition-colors" size={32} />
                                         </div>
 
-                                        {/* Title */}
                                         <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                                             {service.title}
                                         </h3>
 
-                                        {/* Description */}
                                         <p className="text-foreground/70 leading-relaxed text-base mb-6">{service.description}</p>
 
-                                        {/* Learn More Link */}
-                                        <button className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2 group-hover:gap-3">
+                                        {/* <button className="text-primary font-semibold hover:text-primary/80 transition-colors inline-flex items-center gap-2 group-hover:gap-3">
                                             Más información
                                             <span className="group-hover:translate-x-1 transition-transform">→</span>
-                                        </button>
+                                        </button> */}
                                     </div>
                                 )
                             })}
@@ -86,8 +80,7 @@ export default function ServiciosPage() {
                     </div>
                 </section>
 
-                {/* CTA Section */}
-                <section className="section-padding bg-gradient-to-b from-muted/10 via-background to-background">
+                <section className="section-padding bg-linear-to-br from-muted/10 via-background to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
                         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 tracking-tight">
                             Listo para transformar tu proyecto
@@ -96,7 +89,7 @@ export default function ServiciosPage() {
                             Contáctame hoy y hablemos sobre cómo puedo ayudarte a alcanzar tus objetivos digitales.
                         </p>
                         <a
-                            href="/contacto"
+                            href="/contact"
                             className="group inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:scale-[1.02]"
                         >
                             Iniciar Conversación

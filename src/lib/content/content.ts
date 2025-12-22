@@ -1,5 +1,3 @@
-// Archivo centralizado para toda la copia del portafolio
-// Esto facilita la edición sin tocar los componentes
 
 export const PORTFOLIO_CONTENT = {
     name: "Banner Casanotan",
@@ -16,14 +14,14 @@ export const PORTFOLIO_CONTENT = {
     extendedBio:
         "Mi nombre es Banner Alfredo Cosanotan Rodriguez. Desde muy joven he sentido una profunda pasión por la tecnología y el diseño visual. Actualmente soy diseñador gráfico y estudio Computación e Informática en Trujillo. Mi objetivo es seguir creciendo profesionalmente, combinando creatividad y conocimientos técnicos para desarrollar soluciones innovadoras y funcionales.",
 
-    email: "banner@example.com",
-    phone: "+51 999 999 999",
+    email: "rodriguezbanner89@gmail.com",
+    phone: "+51 926 507 778",
 
     socialLinks: {
-        github: "#",
+        github: "https://github.com/BannerAlfredo",
         linkedin: "#",
-        facebook: "#",
-        whatsapp: "https://wa.me/?text=Hola%20Banner",
+        facebook: "https://www.facebook.com/banner.rodriguez.39",
+        whatsapp: "https://wa.me/51926507778?text=Hola%20Banner%20estoy%20interesado%20en%20tus%20servicios",
     },
 
     services: [

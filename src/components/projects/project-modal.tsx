@@ -52,7 +52,7 @@ export function ProjectModal({ project, onClose }: ProjectModalProps) {
                     {/* Content */}
                     <div className="p-6 lg:p-8 space-y-8">
                         {/* Image */}
-                        <div className="w-full h-64 bg-gradient-to-br from-primary/20 via-primary/10 to-muted/20 rounded-xl flex items-center justify-center border border-border/50">
+                        <div className="w-full h-64 bg-linear-to-br from-primary/20 via-primary/10 to-muted/20 rounded-xl flex items-center justify-center border border-border/50">
                             <div className="text-center text-foreground/40">
                                 <div className="text-sm font-medium">Imagen del Proyecto</div>
                             </div>

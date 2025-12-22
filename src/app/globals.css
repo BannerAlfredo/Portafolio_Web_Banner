@@ -141,11 +141,11 @@
 
   /* Gradient backgrounds */
   .bg-gradient-primary {
-    @apply bg-gradient-to-br from-primary/10 via-primary/5 to-transparent;
+    @apply bg-linear-to-br from-primary/10 via-primary/5 to-transparent;
   }
 
   .bg-gradient-muted {
-    @apply bg-gradient-to-br from-muted/30 via-muted/20 to-transparent;
+    @apply bg-linear-to-br from-muted/30 via-muted/20 to-transparent;
   }
 
   /* Text utilities */

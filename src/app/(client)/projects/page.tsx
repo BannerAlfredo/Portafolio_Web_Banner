@@ -99,8 +99,7 @@ export default function ProyectosPage() {
         <>
             <Navigation />
             <main>
-                {/* Header */}
-                <section className="section-padding bg-gradient-to-b from-background via-muted/10 to-background">
+                <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
                             Mis Proyectos
@@ -111,8 +110,7 @@ export default function ProyectosPage() {
                     </div>
                 </section>
 
-                {/* Projects Grid */}
-                <section className="section-padding bg-gradient-to-b from-background to-muted/5">
+                <section className="section-padding bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                             {PROJECTS.map((project) => (
@@ -121,15 +119,13 @@ export default function ProyectosPage() {
                                     onClick={() => setSelectedProject(project)}
                                     className="group cursor-pointer card-soft overflow-hidden hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
                                 >
-                                    {/* Project Image */}
-                                    <div className="w-full h-56 bg-gradient-to-br from-primary/20 via-primary/10 to-muted/20 flex items-center justify-center overflow-hidden relative">
-                                        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <div className="w-full h-56 bg-linear-to-br from-primary/20 via-primary/10 to-muted/20 flex items-center justify-center overflow-hidden relative">
+                                        <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                         <div className="text-center text-foreground/40 z-10">
                                             <div className="text-sm font-medium">Imagen del Proyecto</div>
                                         </div>
                                     </div>
 
-                                    {/* Project Info */}
                                     <div className="p-6 space-y-4">
                                         <span className="inline-block px-3 py-1.5 bg-primary/10 text-primary text-xs font-semibold rounded-full border border-primary/20">
                                             {project.category}
@@ -141,7 +137,6 @@ export default function ProyectosPage() {
                                             {project.description}
                                         </p>
 
-                                        {/* Tech Tags */}
                                         <div className="flex flex-wrap gap-2 pt-2">
                                             {project.technologies.slice(0, 3).map((tech) => (
                                                 <span
@@ -158,7 +153,6 @@ export default function ProyectosPage() {
                                             )}
                                         </div>
 
-                                        {/* View Details Button */}
                                         <button className="w-full py-2.5 px-4 bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-primary-foreground transition-all duration-200 font-medium text-sm mt-4 group-hover:shadow-md group-hover:shadow-primary/20">
                                             Ver Detalles
                                         </button>
@@ -170,7 +164,6 @@ export default function ProyectosPage() {
                 </section>
             </main>
 
-            {/* Project Modal */}
             <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
 
             <Footer />

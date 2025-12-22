@@ -3,72 +3,57 @@
 import { useState } from "react"
 import { Navigation } from "@/components/home/Navigation"
 import { Footer } from "@/components/home/Footer"
-import { Award, Briefcase as Certificate } from "lucide-react"
+import { Award, Briefcase as Certificate, X } from "lucide-react"
+import Image from "next/image"
 
 const ACHIEVEMENTS = {
     diplomas: [
         {
             id: 1,
-            title: "Licenciatura en Computación e Informática",
-            institution: "Universidad Nacional de Trujillo",
-            year: "2023",
-            image: "/diploma-placeholder-1.jpg",
-            description: "Carrera académica enfocada en desarrollo de software y sistemas informáticos.",
+            title: "Los que saben mas - XXXVI Aniversario",
+            institution: "I.E. San Francisco de Asís - Tantarica Catán",
+            year: "2017",
+            image: "/diplomas/diploma-2017.jpg",
+            description: "Premio a la excelencia académica en el XXXVI Aniversario de la Institución Educativa San Francisco de Asís - Tantarica Catán.",
         },
         {
             id: 2,
-            title: "Diploma en Diseño Gráfico",
-            institution: "Instituto de Diseño Creativo",
-            year: "2022",
-            image: "/diploma-placeholder-2.jpg",
-            description: "Formación especializada en diseño digital, identidad corporativa y comunicación visual.",
+            title: "Diploma de Honor al Merito Academico",
+            institution: "I.E. San Francisco de Asís - Tantarica Catán",
+            year: "2018",
+            image: "/diplomas/diploma-2018.jpg",
+            description: "Premio a la excelencia académica en la Institución Educativa San Francisco de Asís - Tantarica Catán.",
         },
         {
             id: 3,
-            title: "Full Stack Web Development",
-            institution: "Plataforma Online de Tecnología",
-            year: "2021",
-            image: "/diploma-placeholder-3.jpg",
-            description: "Certificación en desarrollo full-stack con React, Node.js y bases de datos.",
+            title: "Diploma de Honor al Merito Academico",
+            institution: "I.E. San Francisco de Asís - Tantarica Catán",
+            year: "2019",
+            image: "/diplomas/diploma-2019.jpg",
+            description: "Premio a la excelencia académica en la Institución Educativa San Francisco de Asís - Tantarica Catán.",
         },
     ],
     constancias: [
         {
             id: 1,
-            title: "Google UX Design Certificate",
-            organization: "Google",
+            title: "Certificado de participación Feria Tecnología 2023 - II",
+            organization: "CIBERTEC",
             year: "2023",
-            image: "/certificate-placeholder-1.jpg",
-            description: "Certificado en diseño UX por Google, enfocado en investigación y prototipado.",
-        },
-        {
-            id: 2,
-            title: "AWS Certified Cloud Practitioner",
-            organization: "Amazon Web Services",
-            year: "2023",
-            image: "/certificate-placeholder-2.jpg",
-            description: "Certificación en servicios en la nube y arquitectura AWS.",
-        },
-        {
-            id: 3,
-            title: "Advanced JavaScript",
-            organization: "Codecademy",
-            year: "2022",
-            image: "/certificate-placeholder-3.jpg",
-            description: "Certificado en JavaScript avanzado y programación orientada a objetos.",
-        },
+            image: "/certifications/certification-cibertec.jpg",
+            description: "Certificado de participación en la Feria Tecnología 2023 - II organizada por CIBERTEC.",
+        }
     ],
 }
 
 export default function LogrosPage() {
     const [activeTab, setActiveTab] = useState<"diplomas" | "constancias">("diplomas")
+    const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
     return (
         <>
             <Navigation />
             <main>
-                {/* Header */}
-                <section className="section-padding bg-gradient-to-b from-background via-muted/10 to-background">
+                <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
                             Logros y Certificaciones
@@ -79,10 +64,8 @@ export default function LogrosPage() {
                     </div>
                 </section>
 
-                {/* Tabs */}
-                <section className="section-padding bg-gradient-to-b from-background to-muted/5">
+                <section className="section-padding bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
-                        {/* Tab Buttons */}
                         <div className="flex gap-2 mb-12 border-b border-border/30 pb-2">
                             <button
                                 onClick={() => setActiveTab("diplomas")}
@@ -112,7 +95,6 @@ export default function LogrosPage() {
                             </button>
                         </div>
 
-                        {/* Content Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                             {(activeTab === "diplomas" ? ACHIEVEMENTS.diplomas : ACHIEVEMENTS.constancias).map(
                                 (achievement: any) => (
@@ -120,17 +102,16 @@ export default function LogrosPage() {
                                         key={achievement.id}
                                         className="group card-soft overflow-hidden h-full flex flex-col hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
                                     >
-                                        {/* Image */}
-                                        <div className="w-full h-56 bg-gradient-to-br from-primary/20 via-primary/10 to-muted/20 flex items-center justify-center relative overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                            <div className="text-center text-foreground/40 z-10">
-                                                <div className="text-sm font-medium">
-                                                    Imagen de {activeTab === "diplomas" ? "Diploma" : "Certificación"}
-                                                </div>
-                                            </div>
+                                        <div className="w-full h-56 bg-linear-to-br from-primary/20 via-primary/10 to-muted/20 flex items-center justify-center relative overflow-hidden">
+                                            <div className="absolute inset-0 bg-linear-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20" />
+                                            <Image 
+                                                src={achievement.image} 
+                                                alt={achievement.title} 
+                                                fill
+                                                className="object-cover z-10"
+                                            />
                                         </div>
 
-                                        {/* Content */}
                                         <div className="p-6 flex flex-col grow">
                                             <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
                                                 {achievement.title}
@@ -148,7 +129,10 @@ export default function LogrosPage() {
                                                 {achievement.description}
                                             </p>
 
-                                            <button className="mt-auto inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors group-hover:gap-2">
+                                            <button 
+                                                onClick={() => setSelectedImage(achievement.image)}
+                                                className="mt-auto inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors group-hover:gap-2"
+                                            >
                                                 Ver Credencial
                                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                                             </button>
@@ -161,6 +145,34 @@ export default function LogrosPage() {
                 </section>
             </main>
             <Footer />
+
+            {selectedImage && (
+                <div 
+                    className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <div 
+                        className="relative max-w-5xl max-h-[90vh] w-full h-full flex items-center justify-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setSelectedImage(null)}
+                            className="absolute top-4 right-4 z-10 bg-background/90 hover:bg-background text-foreground rounded-full p-2 shadow-lg transition-colors"
+                        >
+                            <X size={24} />
+                        </button>
+                        <div className="relative w-full h-full">
+                            <Image
+                                src={selectedImage}
+                                alt="Credencial completa"
+                                fill
+                                className="object-contain"
+                                sizes="90vw"
+                            />
+                        </div>
+                    </div>
+                </div>
+            )}
         </>
     )
 }

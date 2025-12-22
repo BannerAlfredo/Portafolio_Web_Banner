@@ -19,6 +19,9 @@ export const metadata: Metadata = {
     "Desarrollador web creativo y diseñador gráfico. Creo experiencias digitales funcionales, limpias e innovadoras en Trujillo, Perú.",
   keywords: "desarrollador web, diseño web, frontend, Peru, Trujillo",
   authors: [{ name: "Banner Casanotan" }],
+  icons: {
+    icon: "/b.ico",
+  },
   openGraph: {
     type: "website",
     locale: "es_PE",
@@ -46,7 +49,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
       </head>
-      <body className={`${geistSans.className} font-sans antialiased`}>
+      <body className={`${geistSans.className} font-sans antialiased`} cz-shortcut-listen="true">
         {children}
       </body>
     </html>

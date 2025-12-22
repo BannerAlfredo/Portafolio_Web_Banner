@@ -39,8 +39,7 @@ export default function HistoriaPage() {
         <>
             <Navigation />
             <main>
-                {/* Header */}
-                <section className="section-padding bg-gradient-to-b from-background via-muted/10 to-background">
+                <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
                             Mi Historia
@@ -51,38 +50,29 @@ export default function HistoriaPage() {
                     </div>
                 </section>
 
-                {/* Timeline */}
-                <section className="section-padding bg-gradient-to-b from-background to-muted/5">
+                <section className="section-padding bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth max-w-4xl">
                         <div className="space-y-16">
                             {TIMELINE_ITEMS.map((item, index) => (
                                 <div key={index} className="relative flex gap-6 md:gap-12">
-                                    {/* Timeline Line and Dot */}
                                     <div className="flex flex-col items-center">
-                                        {/* Dot */}
                                         <div className="w-5 h-5 md:w-6 md:h-6 bg-primary rounded-full mt-2 ring-4 ring-background relative z-10 shadow-lg shadow-primary/30" />
-                                        {/* Line */}
                                         {index !== TIMELINE_ITEMS.length - 1 && (
-                                            <div className="w-1 h-40 md:h-48 bg-gradient-to-b from-primary/60 via-primary/40 to-primary/20 mt-4 rounded-full" />
+                                            <div className="w-1 h-40 md:h-48 bg-linear-to-br from-primary/60 via-primary/40 to-primary/20 mt-4 rounded-full" />
                                         )}
                                     </div>
 
-                                    {/* Content */}
                                     <div className="pb-8 md:pb-12 flex-1">
-                                        {/* Year Badge */}
                                         <div className="inline-block px-4 py-1.5 bg-primary/10 rounded-full border border-primary/20 mb-4">
                                             <span className="text-sm font-bold text-primary">{item.year}</span>
                                         </div>
 
-                                        {/* Title */}
                                         <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2 tracking-tight">
                                             {item.title}
                                         </h3>
 
-                                        {/* Date */}
                                         <p className="text-sm text-foreground/60 mb-5">{item.date}</p>
 
-                                        {/* Description */}
                                         <div className="card-soft p-6 md:p-8 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
                                             <p className="text-foreground/80 leading-relaxed text-base">{item.description}</p>
                                         </div>
@@ -93,8 +83,7 @@ export default function HistoriaPage() {
                     </div>
                 </section>
 
-                {/* Summary Stats */}
-                <section className="section-padding bg-gradient-to-b from-muted/10 via-background to-background">
+                <section className="section-padding bg-linear-to-br from-muted/10 via-background to-background">
                     <div className="container-smooth">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
                             {[
@@ -107,7 +96,7 @@ export default function HistoriaPage() {
                                     key={index}
                                     className="card-soft text-center py-8 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
                                 >
-                                    <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent mb-3">
+                                    <div className="text-4xl md:text-5xl font-bold bg-linear-to-br from-primary to-primary/70 bg-clip-text text-transparent mb-3">
                                         {stat.value}
                                     </div>
                                     <p className="text-foreground/70 text-sm font-medium">{stat.label}</p>
