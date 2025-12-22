@@ -47,5 +47,5 @@ export const PORTFOLIO_CONTENT = {
         },
     ],
 
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js", "GraphQL", "Figma", "GitHub"],
+    technologies: ["Next.js", "React", "Photoshop", "Illustrator", "InDesign", "Premiere Pro", "Figma", "HTML"],
 }

@@ -12,6 +12,7 @@ export default function ContactoPage() {
         name: "",
         email: "",
         message: "",
+        phone: "",
     })
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(false)
@@ -43,7 +44,7 @@ export default function ContactoPage() {
             }
 
             setSuccess(true)
-            setFormData({ name: "", email: "", message: "" })
+            setFormData({ name: "", email: "", message: "", phone: "" })
             setTimeout(() => setSuccess(false), 5000)
         } catch (err) {
             setError(err instanceof Error ? err.message : "Ocurrió un error")
@@ -178,6 +179,22 @@ export default function ContactoPage() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             placeholder="tu@email.com"
+                                            required
+                                            className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2.5">
+                                            Teléfono
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            placeholder="999999999"
                                             required
                                             className="w-full px-4 py-3 bg-background border border-border rounded-xl text-foreground placeholder:text-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all"
                                         />

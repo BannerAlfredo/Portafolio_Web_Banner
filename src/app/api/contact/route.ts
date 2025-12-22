@@ -11,9 +11,9 @@ const transporter = nodemailer.createTransport({
 
 export async function POST(request: NextRequest) {
     try {
-        const { name, email, message } = await request.json()
+        const { name, email, message, phone } = await request.json()
 
-        if (!name || !email || !message) {
+        if (!name || !email || !message || !phone) {
             return NextResponse.json({ error: "Faltan campos requeridos" }, { status: 400 })
         }
 
@@ -33,6 +33,7 @@ export async function POST(request: NextRequest) {
           <div style="margin: 20px 0;">
             <p><strong>Nombre:</strong> ${escapeHtml(name)}</p>
             <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+            <p><strong>Teléfono:</strong> ${escapeHtml(phone)}</p>
           </div>
           
           <div style="background-color: #f7fafc; border-left: 4px solid #3b82f6; padding: 15px; margin: 20px 0;">
