@@ -101,16 +101,16 @@ export default function ProyectosPage() {
             <main>
                 <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
-                            Mis Proyectos
-                        </h1>
-                        <p className="text-lg sm:text-xl text-foreground/70 leading-relaxed">
-                            Explora una selección de mis trabajos más destacados donde combino diseño y desarrollo.
-                        </p>
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 tracking-tight">
+                        Mis Proyectos
+                    </h1>
+                    <p className="text-base sm:text-lg text-foreground/70 leading-relaxed">
+                        Explora una selección de mis trabajos más destacados donde combino diseño y desarrollo.
+                    </p>
                     </div>
                 </section>
 
-                <section className="section-padding bg-linear-to-br from-background to-muted/5">
+                <section className="pt-10 pb-20 bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                             {PROJECTS.map((project) => (

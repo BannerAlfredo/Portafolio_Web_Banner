@@ -5,32 +5,39 @@ import { Footer } from "@/components/home/Footer"
 
 const TIMELINE_ITEMS = [
     {
-        year: "2020",
-        title: "Termino mis estudios secundarios",
-        date: "Catán, 05-12-2020",
-        description:
-            "Este fue el momento en que culminé mis estudios secundarios. No tenía claro qué camino seguir, pero inicié la carrera de computación e informática al entender que podía aportar soluciones en el mundo web.",
-    },
-    {
-        year: "2021",
-        title: "Empiezo a trabajar",
+        year: "Enero 2025 - Actualidad",
+        title: "Programador - Proyectos Personales",
         date: "Trujillo",
         description:
-            "Comencé mi carrera profesional como ayudante en una empresa local. Esta experiencia fue fundamental para entender las dinámicas del mundo laboral y desarrollar mis habilidades técnicas.",
+            "Desde enero de 2025 desarrollo proyectos personales como Programador, aplicando tecnologías de desarrollo web y software para crear sistemas funcionales, portafolios web, aplicaciones y soluciones digitales, consolidando mi perfil como desarrollador en formación.",
     },
     {
-        year: "2022",
-        title: "Envato Studio - Lead Web Designer",
-        date: "Remoto",
+        year: "Enero 2024 - Actualidad",
+        title: "Diseñador Gráfico",
+        date: "Modalidad: Estudio y Trabajo",
         description:
-            "Ascendí a la posición de Lead Web Designer en Envato Studio. Aquí lideré proyectos de diseño web, trabajé con clientes internacionales y mejoré mis habilidades en diseño responsivo.",
+            "A partir de enero de 2024 comencé a trabajar como Diseñador Gráfico, aplicando mis conocimientos en proyectos reales mientras continúo con mis estudios. He participado en el diseño de piezas visuales, contenido digital e identidad gráfica, fortaleciendo mi experiencia profesional.",
     },
     {
-        year: "2023",
-        title: "Especializándome en Frontend",
-        date: "Actual",
+        year: "Agosto 2023 - Actualidad",
+        title: "Computación e Informática",
+        date: "Trujillo",
         description:
-            "Actualmente me estoy especializando en desarrollo frontend moderno con React y Next.js. Combino mis habilidades de diseño con programación para crear experiencias digitales excepcionales.",
+            "Desde agosto de 2023 estudio la carrera de Computación e Informática, enfocándome en el desarrollo de software, aplicaciones web y bases de datos. Esta formación me ha permitido complementar mis habilidades creativas con conocimientos técnicos orientados a la creación de soluciones digitales funcionales y eficientes.",
+    },
+    {
+        year: "2021 - 2023",
+        title: "Estudios en Diseño Gráfico",
+        date: "Trujillo",
+        description:
+            "En el año 2021 inicié mis estudios en Diseño Gráfico, donde desarrollé habilidades creativas y visuales, fortaleciendo mi capacidad para comunicar ideas mediante el diseño. Esta etapa fue clave para despertar mi interés por la creación de interfaces atractivas y experiencias visuales orientadas al entorno digital.",
+    },
+    {
+        year: "2016 - 2020",
+        title: "Termino mis estudios secundarios",
+        date: "Catán - 05 de diciembre de 2020",
+        description:
+            "Durante este período culminé mis estudios secundarios. Al finalizar, aún no tenía completamente definido el camino profesional a seguir, pero ya mostraba un fuerte interés por la creatividad y la tecnología, lo que despertó mi motivación por el área digital.",
     },
 ]
 
@@ -41,7 +48,7 @@ export default function HistoriaPage() {
             <main>
                 <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 tracking-tight">
                             Mi Historia
                         </h1>
                         <p className="text-lg sm:text-xl text-foreground/70 leading-relaxed">
@@ -50,7 +57,7 @@ export default function HistoriaPage() {
                     </div>
                 </section>
 
-                <section className="section-padding bg-linear-to-br from-background to-muted/5">
+                <section className="pt-10 pb-20 bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth max-w-4xl">
                         <div className="space-y-16">
                             {TIMELINE_ITEMS.map((item, index) => (
@@ -83,14 +90,14 @@ export default function HistoriaPage() {
                     </div>
                 </section>
 
-                <section className="section-padding bg-linear-to-br from-muted/10 via-background to-background">
+                <section className="pt-10 pb-20 bg-linear-to-br from-muted/10 via-background to-background">
                     <div className="container-smooth">
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
                             {[
                                 { label: "Años de Experiencia", value: "4+" },
                                 { label: "Proyectos Completados", value: "30+" },
                                 { label: "Clientes Satisfechos", value: "25+" },
-                                { label: "Tecnologías", value: "20+" },
+                                { label: "Tecnologías & Herramientas", value: "10+" },
                             ].map((stat, index) => (
                                 <div
                                     key={index}

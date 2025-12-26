@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Github, Linkedin, Facebook, MessageCircle } from "lucide-react"
 
 export function Footer() {
@@ -25,9 +26,16 @@ export function Footer() {
             <div className="container-smooth py-16">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     <div>
-                        <h3 className="text-2xl font-bold bg-linear-to-br from-primary to-primary/70 bg-clip-text text-transparent mb-4">
-                            BC
-                        </h3>
+                        <div className="mb-4">
+                            <Image
+                                src="/logo.png"
+                                alt="Banner Casanotan Logo"
+                                width={40}
+                                height={40}
+                                priority
+                            />
+                            </div>
+
                         <p className="text-foreground/70 text-sm leading-relaxed max-w-xs">
                             Desarrollador web creativo especializado en crear experiencias digitales funcionales e innovadoras.
                         </p>

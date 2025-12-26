@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X, Download } from "lucide-react"
+import Image from "next/image"
 
 export function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
@@ -28,11 +29,17 @@ export function Navigation() {
     return (
         <nav className="sticky top-0 z-50 glass border-b border-border/30">
             <div className="container-smooth flex items-center justify-between h-20">
-                <Link 
-                    href="/" 
-                    className="text-2xl font-bold bg-linear-to-r from-primary to-primary/70 bg-clip-text text-transparent hover:from-primary/80 hover:to-primary/50 transition-all"
+                <Link
+                href="/"
+                className="flex items-center gap-2 hover:opacity-80 transition-opacity"
                 >
-                    BC
+                <Image
+                    src="/logo.png"
+                    alt="Banner Casanotan Logo"
+                    width={40}
+                    height={40}
+                    priority
+                />
                 </Link>
 
                 <div className="hidden md:flex items-center gap-1">

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: "desarrollador web, diseño web, frontend, Peru, Trujillo",
   authors: [{ name: "Banner Casanotan" }],
   icons: {
-    icon: "/b.ico",
+    icon: "/favicon.ico",
   },
   openGraph: {
     type: "website",

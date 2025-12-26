@@ -2,32 +2,56 @@
 
 import { Navigation } from "@/components/home/Navigation"
 import { Footer } from "@/components/home/Footer"
-import { Code, Zap, Palette, Book } from "lucide-react"
+import {   Code, Megaphone, Globe, Settings, Palette, Zap, Wrench, Search, BookOpen } from "lucide-react"
 
 const SERVICES = [
     {
         icon: Code,
         title: "Desarrollo de software a medida",
         description:
-            "Desarrollamos soluciones personalizadas según tus necesidades: sistemas internos, aplicaciones web y móviles, automatización de procesos y herramientas empresariales.",
+            "Creamos soluciones tecnológicas personalizadas según las necesidades de cada cliente. Desarrollamos sistemas internos, aplicaciones web y móviles, automatización de procesos y herramientas empresariales que optimizan la gestión y productividad empresarial.",
     },
     {
-        icon: Zap,
+        icon: Megaphone,
         title: "Estrategia y Publicidad Digital",
         description:
-            "Diseñamos y ejecutamos campañas efectivas en redes sociales, Google Ads y otros canales digitales para aumentar tu visibilidad, atraer clientes y generar ventas.",
+            "Diseñamos y ejecutamos estrategias digitales efectivas en redes sociales, Google Ads y otros canales digitales, orientadas a mejorar la visibilidad de marca, atraer clientes potenciales y aumentar las conversiones.",
+    },
+    {
+        icon: Globe,
+        title: "Diseño y Desarrollo Web",
+        description:
+            "Desarrollamos sitios web informativos, corporativos y tiendas virtuales (e-commerce), con un enfoque moderno, escalable y optimizado para todos los dispositivos. Creamos experiencias digitales que convierten visitantes en clientes.",
+    },
+    {
+        icon: Settings,
+        title: "Sistemas de Gestión Empresarial",
+        description:
+            "Desarrollamos sistemas de gestión personalizados como inventarios, ventas, reservas, clientes y reportes, adaptados a las necesidades de cada negocio y con acceso seguro para administradores y usuarios.",
     },
     {
         icon: Palette,
-        title: "Diseño y Desarrollo Web",
+        title: "Diseño Gráfico y Branding",
         description:
-            "Informativos, corporativos y e-commerce, con enfoque moderno y escalable. Creamos experiencias digitales que convierten visitantes en clientes.",
+            "Creamos identidad visual profesional: logotipos, manual de marca, piezas publicitarias, contenido para redes sociales y material corporativo, alineados a la imagen y objetivos de tu negocio.",
     },
     {
-        icon: Book,
-        title: "Cursos y Capacitaciones",
+        icon: Zap,
+        title: "Automatización de Procesos",
         description:
-            "Capacitaciones en diseño gráfico, fotografía, programación y más. Formación personalizada para equipos y profesionales independientes.",
+            "Optimizamos procesos repetitivos mediante herramientas digitales y sistemas automatizados, reduciendo tiempos operativos y errores humanos, y mejorando la eficiencia empresarial.",
+    },
+    {
+        icon: Wrench,
+        title: "Mantenimiento y Soporte Web",
+        description:
+            "Brindamos soporte técnico, mantenimiento y actualizaciones para sitios web y sistemas, garantizando seguridad, rendimiento y disponibilidad continua.",
+    },
+    {
+        icon: Search,
+        title: "Optimización y SEO",
+        description:
+            "Optimizamos sitios web para motores de búsqueda (SEO), mejorando su posicionamiento, velocidad de carga y experiencia de usuario para atraer tráfico orgánico de calidad.",
     },
 ]
 
@@ -37,11 +61,11 @@ export default function ServiciosPage() {
             <Navigation />
             <main>
                 <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
-                    <div className="container-smooth text-center max-w-4xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+                    <div className="container-smooth text-center max-w-3xl mx-auto">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 tracking-tight">
                             ¿Qué ofrezco?
                         </h1>
-                        <p className="text-lg sm:text-xl text-foreground/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-foreground/70 leading-relaxed">
                             Brindamos soluciones digitales integrales para impulsar tu negocio. Desde el desarrollo de software y
                             diseño web profesional, hasta estrategias de marketing y formación personalizada. Nuestro objetivo es
                             ayudarte a crecer con tecnología moderna, creatividad y resultados medibles.
@@ -49,7 +73,7 @@ export default function ServiciosPage() {
                     </div>
                 </section>
 
-                <section className="section-padding bg-linear-to-br from-background to-muted/5">
+                <section className="pt-10 pb-20 bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
                             {SERVICES.map((service, index) => {
@@ -59,7 +83,7 @@ export default function ServiciosPage() {
                                         key={index}
                                         className="group card-soft p-8 lg:p-10 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 hover:-translate-y-1"
                                     >
-                                        <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 border border-primary/20 group-hover:border-primary">
+                                        <div className="w-15 h-15 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 group-hover:scale-110 border border-primary/20 group-hover:border-primary">
                                             <Icon className="text-primary group-hover:text-primary-foreground transition-colors" size={32} />
                                         </div>
 

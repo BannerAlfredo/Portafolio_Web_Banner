@@ -55,16 +55,16 @@ export default function LogrosPage() {
             <main>
                 <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 tracking-tight">
                             Logros y Certificaciones
                         </h1>
-                        <p className="text-lg sm:text-xl text-foreground/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-foreground/70 leading-relaxed">
                             Mis credenciales académicas y certificaciones profesionales
                         </p>
                     </div>
                 </section>
 
-                <section className="section-padding bg-linear-to-br from-background to-muted/5">
+                <section className="pt-10 pb-20 bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="flex gap-2 mb-12 border-b border-border/30 pb-2">
                             <button

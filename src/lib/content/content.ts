@@ -19,7 +19,7 @@ export const PORTFOLIO_CONTENT = {
 
     socialLinks: {
         github: "https://github.com/BannerAlfredo",
-        linkedin: "#",
+        linkedin: "https://www.linkedin.com/in/banner-rodr%C3%ADguez-858887223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         facebook: "https://www.facebook.com/banner.rodriguez.39",
         whatsapp: "https://wa.me/51926507778?text=Hola%20Banner%20estoy%20interesado%20en%20tus%20servicios",
     },
@@ -47,5 +47,5 @@ export const PORTFOLIO_CONTENT = {
         },
     ],
 
-    technologies: ["Next.js", "React", "Photoshop", "Illustrator", "InDesign", "Premiere Pro", "Figma", "HTML"],
+    technologies: ["Next.js", "Angular", "Html", "CSS", "Corel Draw", "Photoshop", "Figma", "Illustrator"],
 }

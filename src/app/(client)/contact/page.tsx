@@ -55,7 +55,7 @@ export default function ContactoPage() {
 
     const socialLinks = [
         { icon: Github, href: "https://github.com/BannerAlfredo", label: "GitHub", text: "@BannerAlfredo" },
-        { icon: Linkedin, href: "#", label: "LinkedIn", text: "Banner Casanotan" },
+        { icon: Linkedin, href: "https://www.linkedin.com/in/banner-rodr%C3%ADguez-858887223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", label: "LinkedIn", text: "Banner Casanotan" },
         { icon: Facebook, href: "https://www.facebook.com/banner.rodriguez.39", label: "Facebook", text: "Banner Alfredo" },
         { icon: MessageCircle, href: "https://wa.me/51926507778?text=Hola%20Banner", label: "WhatsApp", text: "+51 926 507 778" },
     ]
@@ -66,16 +66,16 @@ export default function ContactoPage() {
             <main>
                 <section className="section-padding bg-linear-to-br from-background via-muted/10 to-background">
                     <div className="container-smooth text-center max-w-3xl mx-auto">
-                        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6 tracking-tight">
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-5 tracking-tight">
                             Contacto
                         </h1>
-                        <p className="text-lg sm:text-xl text-foreground/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-foreground/70 leading-relaxed">
                             Estoy disponible para nuevos proyectos y colaboraciones. ¡Cuéntame sobre tu idea!
                         </p>
                     </div>
                 </section>
 
-                <section className="section-padding bg-linear-to-br from-background to-muted/5">
+                <section className="pt-10 pb-20 bg-linear-to-br from-background to-muted/5">
                     <div className="container-smooth">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                             <div className="space-y-10">
