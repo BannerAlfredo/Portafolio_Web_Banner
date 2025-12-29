@@ -47,5 +47,5 @@ export const PORTFOLIO_CONTENT = {
         },
     ],
 
-    technologies: ["Next.js", "Angular", "Html", "CSS", "Corel Draw", "Photoshop", "Figma", "Illustrator"],
+    technologies: ["Html5", "Css3", "JavaScript", "TypeScript", "PHP", "C#", "Angular","Sprig Tool","MySql","Sql Server","Git / GitHub","Visual Studio","CorelDraw","PhotoShop","Illustrator","Figma"],
 }
